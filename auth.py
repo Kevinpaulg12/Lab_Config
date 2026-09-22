@@ -18,3 +18,9 @@ def tiene_permiso(usuario: str, rol_requerido: str) -> bool:
         "operador": ["CREAR", "CONSULTAR"]
     }
     return rol_requerido in roles.get(usuario, [])
+class AutenticacionError(Exception):
+    """Excepción personalizada para errores de autenticación."""
+    def __init__(self, mensaje: str):
+        super().__init__(mensaje)
+        self.mensaje = mensaje
+        
