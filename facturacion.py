@@ -2,8 +2,7 @@
 Módulo de cálculo fiscal y generación de comprobantes.
 """
 
-TASA_IVA = 0.15  # Tasa estándar para cálculo de impuestos
-
+TASA_IVA = 0.12  # Tasa estándar para cálculo de impuestos
 def calcular_impuesto(subtotal: float) -> float:
     return round(subtotal * TASA_IVA, 2)
 
